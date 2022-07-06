@@ -43,7 +43,7 @@ function fetchWeather()
     let lang = 'de';
     let units = 'metric';
     
-    url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}&units=${units}&lang=${lang}`;
+    url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${key}&units=${units}&lang=${lang}`;
     
     fetch(url)
         .then(resp=> {
@@ -64,10 +64,17 @@ function fetchWeather()
  */
 function createJPG(weatherData)
 {
+    let currentTemp = weatherData.current.temp;
+    let currentTempFeel = weatherData.current.feels_like;
+    let weatherDescriptionToday = weatherData.daily[0].weather[0].description;
+    let icon = weatherData.daily[0].weather[0].icon;
+    let tempMorning = weatherData.daily[0].temp.morn;
+    let tempDay = weatherData.daily[0].temp.day;
+    let tempEvening = weatherData.daily[0].temp.eve;
+    let tempNight = weatherData.daily[0].temp.night
+    let humidityToday = weatherData.daily[0].humidity;
 
-    //TODO:Fill variables for usefull informations
-
-console.log(weatherData);
+    console.log(weatherData);
 }
 
 
