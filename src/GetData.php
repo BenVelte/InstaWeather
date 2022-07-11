@@ -34,10 +34,8 @@ class GetData
     public function fetchData()
     {
         $apiKey = $this->getAPIKey();
-        echo $apiKey;
         $weatherData = file_get_contents("https://api.openweathermap.org/data/2.5/onecall?lat=$this->lat&lon=$this->lon&appid=$apiKey&units=$this->unit&lang=$this->lang");
-
-        // Current String, maybe better object
-        echo $weatherData;
+        $weatherData = json_decode($weatherData);
+        var_dump($weatherData);
     }
 }
