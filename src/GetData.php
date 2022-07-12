@@ -24,6 +24,7 @@ class GetData
 
 
     /**
+     * Get local API key
      * @return string API Key
      */
     private static function getAPIKey(): string
@@ -31,11 +32,15 @@ class GetData
         return file_get_contents('./APIKey.txt');
     }
 
-    public function fetchData()
+    /**
+     * Fetch weather data from Openweathermap API
+     * @return object Weather data
+     */
+    public function fetchData(): object
     {
         $apiKey = $this->getAPIKey();
         $weatherData = file_get_contents("https://api.openweathermap.org/data/2.5/onecall?lat=$this->lat&lon=$this->lon&appid=$apiKey&units=$this->unit&lang=$this->lang");
-        $weatherData = json_decode($weatherData);
-        var_dump($weatherData);
+
+        return json_decode($weatherData);
     }
 }

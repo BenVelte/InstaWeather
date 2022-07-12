@@ -1,1 +1,1 @@
-# APIKey.txt in root Verzeichnis
+# APIKey.txt in root Verzeichnis für PHP 
