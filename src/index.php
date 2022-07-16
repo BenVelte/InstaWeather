@@ -7,7 +7,3 @@ $weatherData = $weather->fetchData();
 
 $instaJPG = new CreateJPG();
 $instaJPG->GenerateJPG($weatherData);
-
-//while(true) {
-//    sleep(10000);
-//}

@@ -3,22 +3,22 @@
 class GetData
 {
     /**
-     * @var float Latitude fetch
+     * @var float Latitude
      */
     private float $lat = 50.7667;
 
     /**
-     * @var float Longitude fetch
+     * @var float Longitude
      */
     private float $lon = 9.6;
 
     /**
-     * @var string Language fetch
+     * @var string Language
      */
     private string $lang = "de";
 
     /**
-     * @var string Unit fetch
+     * @var string Unit
      */
     private string $unit = "metric";
 
