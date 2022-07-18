@@ -6,4 +6,4 @@ $weather = new getData();
 $weatherData = $weather->fetchData();
 
 $instaJPG = new CreateJPG();
-$instaJPG->GenerateJPG($weatherData);
+$instaJPG->generateJPG($weatherData);
