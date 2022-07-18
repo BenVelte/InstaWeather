@@ -7,7 +7,7 @@ class CreateJPG
      * @param object $weatherData
      * @return void
      */
-    public function generateJPG(object $weatherData)
+    public function generateJPG(object $weatherData): void
     {
         // Select useful weather Data into variables
         $currentTemp = $weatherData->current->temp;
@@ -22,7 +22,6 @@ class CreateJPG
         $weatherId = $weatherData->daily[0]->weather[0]->id;
 
         // Create image depending on weather
-        // TODO correct if condition string
         if ($weatherId === 800) {
             $image = imagecreatefrompng('../templates/template_sun.png');
         } else if (str_contains($weatherDescriptionToday, "regen")) {

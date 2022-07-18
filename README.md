@@ -1,4 +1,3 @@
-# APIKey.txt in root Verzeichnis für PHP (Docker)
-# APIKey.txt in src für local
+# APIKey.txt in root Verzeichnis
 
 ## Fonts: https://www.abstractfonts.com/font/10755

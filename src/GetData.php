@@ -29,7 +29,7 @@ class GetData
      */
     private static function getAPIKey(): string
     {
-        return file_get_contents('./APIKey.txt');
+        return file_get_contents('../APIKey.txt');
     }
 
     /**
