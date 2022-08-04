@@ -24,7 +24,7 @@ class CreateJPG
         // Create image depending on weather
         if ($weatherId === 800) {
             $image = imagecreatefrompng('../templates/template_sun.png');
-        } else if (str_contains($weatherDescriptionToday, "regen")) {
+        } else if (str_contains($weatherDescriptionToday, "Regen")) {
             $image = imagecreatefrompng('../templates/template_rain.png');
         } else {
             $image = imagecreatefrompng('../templates/template_cloudy.png');
