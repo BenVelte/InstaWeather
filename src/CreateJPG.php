@@ -31,12 +31,8 @@ class CreateJPG
         }
 
 
-        // Set Text color to black
+        // Set Text color to white
         $textColor = imagecolorallocate($image, 255, 255, 255);
-
-        // Set background of image white
-        $white = imagecolorallocate($image, 255, 255, 255);
-        imagefill($image, 0, 0, $white);
 
         // Text to show in image
         $text = "\nAktuelle Temperatur: $currentTemp °\n\nGefühlte Temperatur: $currentTempFeel °\n\n" .

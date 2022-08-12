@@ -11,7 +11,7 @@ class PostImage
     {
         $API_KEY = $_ENV['IMGBB_API_KEY'];
         $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, 'https://api.imgbb.com/1/upload?key='.$API_KEY);
+        curl_setopt($ch, CURLOPT_URL, 'https://api.imgbb.com/1/upload?key=' . $API_KEY);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
@@ -21,7 +21,7 @@ class PostImage
         $result = curl_exec($ch);
         if (curl_errno($ch)) {
             return 'Error:' . curl_error($ch);
-        }else{
+        } else {
             $response = json_decode($result, true);
 
             return $response['data']['url'];
