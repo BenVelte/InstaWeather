@@ -1,5 +1,10 @@
 <?php
 
+require '../vendor/autoload.php';
+
+$dotenv = Dotenv\Dotenv::createMutable(__DIR__, '/../.env');
+$dotenv->load();
+
 class GetData
 {
     /**
@@ -24,22 +29,16 @@ class GetData
 
 
     /**
-     * Get local API key
-     * @return string API Key
-     */
-    private static function getAPIKey(): string
-    {
-        return file_get_contents('../WeatherAPIKey.txt');
-    }
-
-    /**
      * Fetch weather data from Openweathermap API
      * @return object Weather data
      */
     public function fetchData(): object
     {
-        $apiKey = $this->getAPIKey();
-        $weatherData = file_get_contents("https://api.openweathermap.org/data/2.5/onecall?lat=$this->lat&lon=$this->lon&appid=$apiKey&units=$this->unit&lang=$this->lang");
+        $apiKey = $_ENV['WEATHER_API_KEY'];
+
+        $weatherData = file_get_contents("https://api.openweathermap.org/data/2.5/onecall?lat=$this->lat" .
+            "&lon=$this->lon&appid=$apiKey&units=$this->unit&lang=$this->lang");
+
 
         return json_decode($weatherData);
     }

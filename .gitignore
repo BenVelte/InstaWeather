@@ -1,2 +1,5 @@
 WeatherAPIKey.txt
 /src/weather.jpg
+composer.lock
+vendor
+.env
