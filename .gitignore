@@ -3,3 +3,4 @@ WeatherAPIKey.txt
 composer.lock
 vendor
 .env
+.idea
