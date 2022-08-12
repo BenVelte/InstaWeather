@@ -39,7 +39,11 @@ class CreateJPG
         imagefill($image, 0, 0, $white);
 
         // Text to show in image
-        $text = "\nAktuelle Temperatur: $currentTemp °\n\nGefühlte Temperatur: $currentTempFeel °\n\n$weatherDescriptionToday\n\n\nWetter am Morgen: $tempMorning °\n\n\nWetter am Mittag: $tempDay °\n\n\nWetter am Abend: $tempEvening °\n\n\nWetter in der Nacht: $tempNight °\n\n\nHeutige Luftfeuchtigkeit: $humidityToday %";
+        $text = "\nAktuelle Temperatur: $currentTemp °\n\nGefühlte Temperatur: $currentTempFeel °\n\n" .
+            "$weatherDescriptionToday\n\n\nWetter am Morgen: $tempMorning °\n\n\nWetter am Mittag: $tempDay °\n\n\n" .
+            "Wetter am Abend: $tempEvening °\n\n\nWetter in der Nacht: $tempNight °\n\n\n" .
+            "Heutige Luftfeuchtigkeit: $humidityToday %";
+
 
         // Set text and position to image
         imagettftext($image, 30, 0, 50, 50, $textColor, "exprswy_free.ttf", $text);
