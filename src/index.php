@@ -19,4 +19,4 @@ $instaJPG->generateJPG($weatherData);
  * Post Image on Instagram
  */
 $post = new PostImage();
-//$post->publishWeather('./weather.jpg');
+$post->publishWeather();
