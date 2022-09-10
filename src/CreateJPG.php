@@ -11,13 +11,19 @@ class CreateJPG
     {
         // Select useful weather Data into variables
         $currentTemp = $weatherData->current->temp;
+        $currentTemp = round($currentTemp, 1);
         $currentTempFeel = $weatherData->current->feels_like;
+        $currentTempFeel = round($currentTempFeel, 1);
         $weatherDescriptionToday = $weatherData->daily[0]->weather[0]->description;
         $icon = $weatherData->daily[0]->weather[0]->icon;
         $tempMorning = $weatherData->daily[0]->temp->morn;
+        $tempMorning = round($tempMorning, 1);
         $tempDay = $weatherData->daily[0]->temp->day;
+        $tempDay = round($tempDay, 1);
         $tempEvening = $weatherData->daily[0]->temp->eve;
+        $tempEvening = round($tempEvening, 1);
         $tempNight = $weatherData->daily[0]->temp->night;
+        $tempNight = round($tempNight, 1);
         $humidityToday = $weatherData->daily[0]->humidity;
         $weatherId = $weatherData->daily[0]->weather[0]->id;
 
