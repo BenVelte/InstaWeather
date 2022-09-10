@@ -10,20 +10,14 @@ class CreateJPG
     public function generateJPG(object $weatherData): void
     {
         // Select useful weather Data into variables
-        $currentTemp = $weatherData->current->temp;
-        $currentTemp = round($currentTemp, 1);
-        $currentTempFeel = $weatherData->current->feels_like;
-        $currentTempFeel = round($currentTempFeel, 1);
+        $currentTemp = round($weatherData->current->temp, 1);
+        $currentTempFeel = round($weatherData->current->feels_like, 1);
         $weatherDescriptionToday = $weatherData->daily[0]->weather[0]->description;
         $icon = $weatherData->daily[0]->weather[0]->icon;
-        $tempMorning = $weatherData->daily[0]->temp->morn;
-        $tempMorning = round($tempMorning, 1);
-        $tempDay = $weatherData->daily[0]->temp->day;
-        $tempDay = round($tempDay, 1);
-        $tempEvening = $weatherData->daily[0]->temp->eve;
-        $tempEvening = round($tempEvening, 1);
-        $tempNight = $weatherData->daily[0]->temp->night;
-        $tempNight = round($tempNight, 1);
+        $tempMorning = round($weatherData->daily[0]->temp->morn, 1);
+        $tempDay = round($weatherData->daily[0]->temp->day, 1);
+        $tempEvening = round($weatherData->daily[0]->temp->eve, 1);
+        $tempNight = round($weatherData->daily[0]->temp->night, 1);
         $humidityToday = $weatherData->daily[0]->humidity;
         $weatherId = $weatherData->daily[0]->weather[0]->id;
 
