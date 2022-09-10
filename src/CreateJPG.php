@@ -36,8 +36,8 @@ class CreateJPG
 
         // Text to show in image
         $text = "\nAktuelle Temperatur: $currentTemp °\n\nGefühlte Temperatur: $currentTempFeel °\n\n" .
-            "$weatherDescriptionToday\n\n\nWetter am Morgen: $tempMorning °\n\n\nWetter am Mittag: $tempDay °\n\n\n" .
-            "Wetter am Abend: $tempEvening °\n\n\nWetter in der Nacht: $tempNight °\n\n\n" .
+            "$weatherDescriptionToday\n\n\nTemperatur am Morgen: $tempMorning °\n\nTemperatur am Mittag: $tempDay °\n\n" .
+            "Temperatur am Abend: $tempEvening °\n\nTemperatur in der Nacht: $tempNight °\n\n\n" .
             "Heutige Luftfeuchtigkeit: $humidityToday %";
 
 
