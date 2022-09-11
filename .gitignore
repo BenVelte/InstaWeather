@@ -1,6 +1,9 @@
 WeatherAPIKey.txt
-/src/weather.jpg
+weather.jpg
 composer.lock
 vendor
 .env
 .idea
+node_modules
+package-lock.json
+cookies.json

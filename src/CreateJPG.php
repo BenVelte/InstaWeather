@@ -45,7 +45,7 @@ class CreateJPG
         imagettftext($image, 30, 0, 50, 50, $textColor, "exprswy_free.ttf", $text);
 
         // Create jpg
-        imagejpeg($image, 'weather.jpg');
+        imagejpeg($image, '../weather.jpg');
 
         imagedestroy($image);
 
