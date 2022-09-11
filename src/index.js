@@ -12,8 +12,8 @@ const port = 8000;
 const cookieStore = new FileCookieStore("./cookies.json");
 
 const client = new Instagram({
-        username: "username",
-        password: "password",
+        username: "XXX",
+        password: "XXX",
         cookieStore
     },
     {
@@ -21,10 +21,17 @@ const client = new Instagram({
     }
 );
 
+let today = new Date();
+let dd = String(today.getDate()).padStart(2, '0');
+let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+let yyyy = today.getFullYear();
+
+today = dd + '.' + mm + '.' + yyyy;
+
 const instagramPostFunction = async () => {
     await client.uploadPhoto({
         photo: "weather.jpg",
-        caption: "Wetter heute",
+        caption: "Wetter heute: " + today,
         post: "feed"
     }).then(async (res) => {
         const media = res.media;
