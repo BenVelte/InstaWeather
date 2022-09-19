@@ -7,7 +7,7 @@ require("dotenv").config();
 
 const port = 8000;
 
-// cron.schedule("00 08 * * *", () => {
+// cron.schedule("00 08 * * *", async () => {
 
 const cookieStore = new FileCookieStore("./cookies.json");
 
@@ -52,8 +52,8 @@ const loginFunction = async () => {
 }
 
 loginFunction();
+// });
 
 app.listen(port, () => {
     console.log(`Listening on port ${port}...`);
 });
-// });
