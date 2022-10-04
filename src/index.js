@@ -37,6 +37,8 @@ const instagramPostFunction = async () => {
         const media = res.media;
 
         console.log(`https://instagram.com/p/${media.code}`);
+    }).catch((err) => {
+        console.log(err.message);
     });
 }
 
@@ -47,7 +49,7 @@ const loginFunction = async () => {
         instagramPostFunction();
     }).catch((err) => {
        console.log("Login failed");
-       console.log(err);
+       console.log(err.message);
     });
 }
 
